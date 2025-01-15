@@ -1,0 +1,110 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fdf5;
+}
+
+header {
+    background-color: #003e5f;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a.active {
+    text-decoration: underline;
+}
+
+main {
+    margin: 20px;
+}
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-header img {
+    border-radius: 0%;
+    width: 100px;
+    height: 100px;
+}
+
+.profile-header h1 {
+    margin: 10px 0;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sections > div {
+    flex: 1;
+    margin: 0 10px;
+    background: rgb(231, 227, 227);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.sections > div h2 {
+    text-align: center;
+}
+
+.certificate-section {
+    margin-top: 20px;
+}
+
+.certificate-section h2 {
+    text-align: center;
+}
+
+.certificates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.certificate {
+    padding: 10px;
+    background-color: #6c453d;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+}
+.certificate:hover {
+    transform: scale(1.1);
+    background-color: #b95555
+}
+footer {
+    background-color: #003e5f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
