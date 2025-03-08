@@ -3,64 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Home Page</title>
-    <meta name="description" content="Course home page for Web and Computer Programming">
-    <meta name="author" content="Onyewuchi Chukwunonso">
+    <meta name="description" content="WDD 231 Course Homepage">
+    <meta name="author" content="Your Name">
+    <title>Rubia M. Francesco - WDD 231</title>
     <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">GitHub Profile</a></li>
-                <li><a href="#">LinkedIn</a></li>
-            </ul>
-        </nav>
+        <img src="images/profile.jpg" alt="Onyewuchi Chukwunonso" class="profile-img">
+        <span class="name">Onyewuchi Chukwunonso</span>
     </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">GitHub Profile</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <div class="profile-header">
-            <img src="images/profile.webp" alt="Profile of Onyewuchi Chukwunonso">
-            <h1>Onyewuchi Chukwunonso</h1>
-        </div>
-        <div class="sections">
-            <div>
-                <h2>Course Work</h2>
-                <ul id="course-list"></ul>
+        <h1>Home</h1>
+        
+        <section class="course-work">
+            <h2>Course Work</h2>
+            <ul id="assignments">
+                <!-- Dynamically populated by JavaScript -->
+            </ul>
+        </section>
+
+        <section class="location">
+            <h2>Nigeria</h2>
+            <div class="image-container">
+                <img src="images/nigeriaflag.png">
+                <p>nigeriaflag</p>
             </div>
-            <div>
-                <h2>Nigeria Flag</h2>
-                <img src="images/nigeriaflag.png" alt="Nigeria Flag" style="width: 100%; border-radius: 5px;">
-                <p style="text-align: center;">Nigeria Flag</p>
-            </div>
-        </div>
-        <section class="certificate-section">
+        </section>
+
+        <section class="certificate">
             <h2>Web and Computer Programming Certificate</h2>
-            <div class="certificates">
-                <div class="certificate">CSE 110</div>
-                <div class="certificate">WDD 130</div>
-                <div class="certificate">CSE 111</div>
-                <div class="certificate">CSE 210</div>
-                <div class="certificate">WDD 131</div>
-                <div class="certificate">WDD 231</div>
+            <div class="filter-buttons">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="cse">CSE</button>
+                <button data-filter="wdd">WDD</button>
+            </div>
+            <div class="course-grid" id="courseGrid">
+                <!-- Dynamically populated by JavaScript -->
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; <span id="current-year"></span> Onyewuchi Chukwunonso, Madagascar</p>
-        <p>Last Update: <span id="last-modified"></span></p>
+        <p>&copy; <span id="currentYear"></span> nigeria  ❤🧡💛💚💙💜🤎🖤 Nigeria </p>
+        <p id="lastModified"></p>
     </footer>
-    <script>
-        const courses = ["Module 1", "Module 2", "Module 3"];
-        const courseList = document.getElementById("course-list");
-        courses.forEach(course => {
-            const listItem = document.createElement("li");
-            listItem.textContent = course;
-            courseList.appendChild(listItem);
-        });
-        document.getElementById("current-year").textContent = new Date().getFullYear();
-        document.getElementById("last-modified").textContent = document.lastModified;
-    </script>
 </body>
 </html>
