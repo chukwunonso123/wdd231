@@ -1,0 +1,78 @@
+/* Medium screen styles (tablets, 641px and up) */
+@media only screen and (min-width: 641px) {
+    /* Header styles */
+    .header-container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+    
+    .logo-container {
+      margin-bottom: 0;
+    }
+    
+    .title-container h1 {
+      font-size: 1.75rem;
+    }
+    
+    .title-container p {
+      font-size: 0.9rem;
+    }
+    
+    nav {
+      width: auto;
+    }
+    
+    #hamburger-btn {
+      display: none;
+    }
+    
+    #primary-nav {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    #primary-nav li {
+      margin-bottom: 0;
+    }
+    
+    /* Directory Controls */
+    .directory-controls {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .directory-title h2 {
+      font-size: 1.75rem;
+    }
+    
+    /* Directory Cards */
+    #directory-cards.grid-view {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* List View */
+    .list-card-main {
+      flex-direction: row;
+    }
+    
+    .list-card-contact {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Footer Styles */
+    .footer-top {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  

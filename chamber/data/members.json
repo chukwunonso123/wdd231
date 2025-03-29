@@ -1,0 +1,91 @@
+[
+    {
+      "id": "1",
+      "name": "Timbuktu Coffee Roasters",
+      "address": "123 Main Street, Timbuktu, Mali",
+      "phone": "+223-555-1234",
+      "website": "https://timbuktu-coffee.example.com",
+      "image": "images/members/coffee-shop.jpg",
+      "membershipLevel": 3,
+      "description": "Locally roasted coffee beans with unique flavors from the heart of Mali.",
+      "email": "info@timbuktu-coffee.example.com"
+    },
+    {
+      "id": "2",
+      "name": "Desert Oasis Resort",
+      "address": "45 Sahara Avenue, Timbuktu, Mali",
+      "phone": "+223-555-2345",
+      "website": "https://desert-oasis.example.com",
+      "image": "images/members/resort.jpg",
+      "membershipLevel": 3,
+      "description": "Luxury accommodations with authentic cultural experiences in the desert.",
+      "email": "bookings@desert-oasis.example.com"
+    },
+    {
+      "id": "3",
+      "name": "Timbuktu Heritage Tours",
+      "address": "78 History Boulevard, Timbuktu, Mali",
+      "phone": "+223-555-3456",
+      "website": "https://heritage-tours.example.com",
+      "image": "images/members/tours.jpg",
+      "membershipLevel": 2,
+      "description": "Educational tours exploring the rich history and UNESCO sites of Timbuktu.",
+      "email": "tours@heritage-tours.example.com"
+    },
+    {
+      "id": "4",
+      "name": "Sahara Trading Company",
+      "address": "12 Market Square, Timbuktu, Mali",
+      "phone": "+223-555-4567",
+      "website": "https://sahara-trading.example.com",
+      "image": "images/members/trading.jpg",
+      "membershipLevel": 2,
+      "description": "Authentic Malian crafts, textiles, and souvenirs from local artisans.",
+      "email": "sales@sahara-trading.example.com"
+    },
+    {
+      "id": "5",
+      "name": "Timbuktu Tech Solutions",
+      "address": "34 Innovation Way, Timbuktu, Mali",
+      "phone": "+223-555-5678",
+      "website": "https://timbuktu-tech.example.com",
+      "image": "images/members/tech.jpg",
+      "membershipLevel": 1,
+      "description": "IT services and technological solutions for businesses throughout Mali.",
+      "email": "support@timbuktu-tech.example.com"
+    },
+    {
+      "id": "6",
+      "name": "Niger River Expeditions",
+      "address": "56 Riverfront Road, Timbuktu, Mali",
+      "phone": "+223-555-6789",
+      "website": "https://niger-expeditions.example.com",
+      "image": "images/members/river.jpg",
+      "membershipLevel": 2,
+      "description": "Guided boat tours and expeditions along the historic Niger River.",
+      "email": "adventures@niger-expeditions.example.com"
+    },
+    {
+      "id": "7",
+      "name": "Timbuktu Medical Center",
+      "address": "89 Health Avenue, Timbuktu, Mali",
+      "phone": "+223-555-7890",
+      "website": "https://timbuktu-medical.example.com",
+      "image": "images/members/medical.jpg",
+      "membershipLevel": 3,
+      "description": "Comprehensive healthcare services for residents and visitors.",
+      "email": "care@timbuktu-medical.example.com"
+    },
+    {
+      "id": "8",
+      "name": "Desert Star Hotel",
+      "address": "23 Hospitality Lane, Timbuktu, Mali",
+      "phone": "+223-555-8901",
+      "website": "https://desert-star.example.com",
+      "image": "images/members/hotel.jpg",
+      "membershipLevel": 3,
+      "description": "Comfortable accommodations with traditional Malian hospitality.",
+      "email": "reservations@desert-star.example.com"
+    }
+  ]
+  

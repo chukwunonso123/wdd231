@@ -1,0 +1,72 @@
+/* Large screen styles (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* Header styles */
+    header {
+      padding: 1rem 2rem;
+    }
+    
+    .logo {
+      width: 70px;
+      height: 70px;
+    }
+    
+    .title-container h1 {
+      font-size: 2rem;
+    }
+    
+    .title-container p {
+      font-size: 1rem;
+    }
+    
+    #primary-nav {
+      gap: 1.5rem;
+    }
+    
+    /* Main Content */
+    main {
+      padding: 2rem;
+    }
+    
+    .directory-title h2 {
+      font-size: 2rem;
+    }
+    
+    .directory-description {
+      font-size: 1.125rem;
+      max-width: 75%;
+    }
+    
+    /* Directory Cards */
+    #directory-cards.grid-view {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* List View */
+    .list-card {
+      padding: 1.5rem;
+    }
+    
+    .list-card-image {
+      width: 140px;
+      height: 140px;
+    }
+    
+    .list-card-contact {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Footer Styles */
+    footer {
+      padding: 3rem 2rem 1.5rem;
+    }
+    
+    .footer-logo img {
+      width: 70px;
+      height: 70px;
+    }
+    
+    .footer-logo h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
