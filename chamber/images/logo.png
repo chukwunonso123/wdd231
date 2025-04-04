@@ -1,1 +1,10 @@
-Placeholder for logo.png
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+  <rect width="60" height="60" rx="8" fill="#1E3A8A"/>
+  <path d="M30 12L45 22V40L30 50L15 40V22L30 12Z" stroke="white" stroke-width="2.5"/>
+  <path d="M30 12V30" stroke="white" stroke-width="2"/>
+  <path d="M45 22L30 30" stroke="white" stroke-width="2"/>
+  <path d="M15 22L30 30" stroke="white" stroke-width="2"/>
+  <path d="M30 50V30" stroke="white" stroke-width="2"/>
+  <circle cx="30" cy="30" r="5" fill="#4F46E5"/>
+</svg>
+
