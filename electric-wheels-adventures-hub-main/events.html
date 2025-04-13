@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - ElectricRides E-Bike Club</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="min-h-screen flex flex-col">
+    <!-- Navbar (same as in index.html) -->
+    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
+      <div class="container flex h-16 items-center">
+        <div class="flex w-full justify-between items-center">
+          <a href="index.html" class="flex items-center space-x-2">
+            <i data-lucide="bike" class="h-6 w-6 text-ebike-electric-blue"></i>
+            <span class="font-display text-xl font-bold">ElectricRides</span>
+          </a>
+          
+          <!-- Mobile Menu Button -->
+          <button class="btn-ghost btn-icon md:hidden" id="mobile-menu-button">
+            <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
+            <i data-lucide="x" class="h-6 w-6 hidden" id="close-icon"></i>
+          </button>
+          
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-1">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="events.html" class="nav-link">Events</a>
+            <a href="membership.html" class="nav-link">Membership</a>
+            <a href="community.html" class="nav-link">Community</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="routes.html" class="nav-link">Routes</a>
+            <button class="btn btn-primary ml-4">Sign In</button>
+          </nav>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div class="md:hidden border-t hidden" id="mobile-menu">
+        <div class="container py-4 flex flex-col space-y-3">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="membership.html" class="nav-link">Membership</a>
+          <a href="community.html" class="nav-link">Community</a>
+          <a href="resources.html" class="nav-link">Resources</a>
+          <a href="shop.html" class="nav-link">Shop</a>
+          <a href="routes.html" class="nav-link">Routes</a>
+          <button class="btn btn-primary w-full mt-2">Sign In</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- Page Header -->
+      <div class="bg-gradient-to-r from-ebike-electric-blue to-ebike-forest-green py-16">
+        <div class="container">
+          <h1 class="text-4xl font-bold text-white">Upcoming Events</h1>
+          <p class="text-white/90 mt-4 max-w-2xl">
+            Join our organized rides, workshops, and social gatherings for e-bike enthusiasts of all levels.
+          </p>
+        </div>
+      </div>
+
+      <!-- Events Section -->
+      <section class="py-20">
+        <div class="container">
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">Upcoming Rides & Workshops</h2>
+            <div class="flex items-center space-x-4 mb-8">
+              <button class="btn btn-outline" id="filter-all">All Events</button>
+              <button class="btn btn-outline" id="filter-beginners">Beginner-Friendly</button>
+              <button class="btn btn-outline" id="filter-intermediate">Intermediate</button>
+              <button class="btn btn-outline" id="filter-advanced">Advanced</button>
+            </div>
+          </div>
+          
+          <!-- Events Grid - will be populated by JS -->
+          <div id="events-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Events will be loaded here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Propose Event Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="container">
+          <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 text-center">Have an Idea for an Event?</h2>
+            <p class="text-gray-600 mb-8 text-center">
+              We welcome suggestions from our community members. If you have an idea for a group ride or workshop, let us know!
+            </p>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <form id="event-proposal-form">
+                <div class="mb-4">
+                  <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                  <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                  <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                </div>
+                <div class="mb-4">
+                  <label for="event-title" class="block text-sm font-medium text-gray-700 mb-2">Event Title</label>
+                  <input type="text" id="event-title" name="event-title" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                </div>
+                <div class="mb-4">
+                  <label for="event-description" class="block text-sm font-medium text-gray-700 mb-2">Event Description</label>
+                  <textarea id="event-description" name="event-description" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required></textarea>
+                </div>
+                <div class="mb-4">
+                  <label for="event-location" class="block text-sm font-medium text-gray-700 mb-2">Proposed Location</label>
+                  <input type="text" id="event-location" name="event-location" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Submit Proposal</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (same as in index.html) -->
+    <footer class="bg-gray-900 text-white">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Club Info -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-2">
+              <i data-lucide="bike" class="h-6 w-6 text-ebike-electric-blue"></i>
+              <span class="font-display text-xl font-bold">ElectricRides</span>
+            </div>
+            <p class="text-gray-400">
+              Bringing e-bike enthusiasts together for adventure, community, and sustainable exploration.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-lucide="facebook" size="20"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-lucide="instagram" size="20"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-lucide="twitter" size="20"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-display text-lg font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+              <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+              <li><a href="membership.html" class="text-gray-400 hover:text-white">Membership</a></li>
+              <li><a href="community.html" class="text-gray-400 hover:text-white">Community</a></li>
+              <li><a href="resources.html" class="text-gray-400 hover:text-white">Resources</a></li>
+              <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h4 class="font-display text-lg font-bold mb-4">Useful Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Safety Guidelines</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Partner With Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="font-display text-lg font-bold mb-4">Contact</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start space-x-3">
+                <i data-lucide="map-pin" size="20" class="text-ebike-electric-blue shrink-0 mt-1"></i>
+                <span class="text-gray-400">123 Trail Road, Bikeville, CA 90210</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="phone" size="20" class="text-ebike-electric-blue"></i>
+                <span class="text-gray-400">(555) 123-4567</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="mail" size="20" class="text-ebike-electric-blue"></i>
+                <span class="text-gray-400">info@electricrides.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400">
+          <p>&copy; <span id="current-year"></span> ElectricRides Club. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

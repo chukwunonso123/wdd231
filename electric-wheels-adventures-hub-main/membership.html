@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership - ElectricRides E-Bike Club</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="min-h-screen flex flex-col">
+    <!-- Navbar (same as in index.html) -->
+    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
+      <div class="container flex h-16 items-center">
+        <div class="flex w-full justify-between items-center">
+          <a href="index.html" class="flex items-center space-x-2">
+            <i data-lucide="bike" class="h-6 w-6 text-ebike-electric-blue"></i>
+            <span class="font-display text-xl font-bold">ElectricRides</span>
+          </a>
+          
+          <!-- Mobile Menu Button -->
+          <button class="btn-ghost btn-icon md:hidden" id="mobile-menu-button">
+            <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
+            <i data-lucide="x" class="h-6 w-6 hidden" id="close-icon"></i>
+          </button>
+          
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-1">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="events.html" class="nav-link">Events</a>
+            <a href="membership.html" class="nav-link">Membership</a>
+            <a href="community.html" class="nav-link">Community</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="routes.html" class="nav-link">Routes</a>
+            <button class="btn btn-primary ml-4">Sign In</button>
+          </nav>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div class="md:hidden border-t hidden" id="mobile-menu">
+        <div class="container py-4 flex flex-col space-y-3">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="membership.html" class="nav-link">Membership</a>
+          <a href="community.html" class="nav-link">Community</a>
+          <a href="resources.html" class="nav-link">Resources</a>
+          <a href="shop.html" class="nav-link">Shop</a>
+          <a href="routes.html" class="nav-link">Routes</a>
+          <button class="btn btn-primary w-full mt-2">Sign In</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- Page Header -->
+      <div class="bg-gradient-to-r from-ebike-electric-blue to-ebike-forest-green py-16">
+        <div class="container">
+          <h1 class="text-4xl font-bold text-white">Join Our Club</h1>
+          <p class="text-white/90 mt-4 max-w-2xl">
+            Become a member of our thriving e-bike community and enjoy exclusive benefits and access.
+          </p>
+        </div>
+      </div>
+
+      <!-- Membership Tiers Section -->
+      <section class="py-20">
+        <div class="container">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Choose Your Membership Plan</h2>
+            <p class="text-gray-600 text-lg">
+              Select the membership level that best fits your e-biking lifestyle and goals.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl border-2 border-gray-200 p-8">
+              <h3 class="text-2xl font-bold">Basic</h3>
+              <div class="mt-4 mb-4">
+                <span class="text-3xl font-bold">Free</span>
+              </div>
+              <p class="text-gray-600 mb-6">Perfect for newcomers</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Access to community forum</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Monthly newsletter</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Attend public events</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Basic route maps</span>
+                </li>
+              </ul>
+              <button class="btn btn-outline w-full" onclick="showRegistrationForm('basic')">Join for Free</button>
+            </div>
+            
+            <div class="border-ebike-electric-blue shadow-lg relative bg-white rounded-xl border-2 p-8">
+              <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-ebike-electric-blue text-white py-1 px-4 rounded-full text-sm font-medium">
+                Most Popular
+              </div>
+              <h3 class="text-2xl font-bold">Standard</h3>
+              <div class="mt-4 mb-4">
+                <span class="text-3xl font-bold">$49/year</span>
+              </div>
+              <p class="text-gray-600 mb-6">Our most popular option</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>All Basic features</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Priority event registration</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Exclusive group rides</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>10% discount on merchandise</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Access to premium routes</span>
+                </li>
+              </ul>
+              <button class="btn btn-primary w-full" onclick="showRegistrationForm('standard')">Select Plan</button>
+            </div>
+            
+            <div class="bg-white rounded-xl border-2 border-gray-200 p-8">
+              <h3 class="text-2xl font-bold">Premium</h3>
+              <div class="mt-4 mb-4">
+                <span class="text-3xl font-bold">$99/year</span>
+              </div>
+              <p class="text-gray-600 mb-6">For dedicated enthusiasts</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>All Standard features</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Quarterly maintenance clinics</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>20% discount on merchandise</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Guest passes for friends</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Complete route library access</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-lucide="check" class="h-5 w-5 text-ebike-forest-green shrink-0 mr-2 mt-0.5"></i>
+                  <span>Special partner discounts</span>
+                </li>
+              </ul>
+              <button class="btn btn-outline w-full" onclick="showRegistrationForm('premium')">Select Plan</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Registration Form Section -->
+      <section class="py-16 bg-gray-50 hidden" id="registration-section">
+        <div class="container">
+          <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-2 text-center">Complete Your Membership</h2>
+            <p class="text-center text-gray-600 mb-8">You selected: <span id="selected-plan" class="font-semibold">Basic</span></p>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <form id="membership-form">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="first-name" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                    <input type="text" id="first-name" name="first-name" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                  </div>
+                  <div>
+                    <label for="last-name" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                  <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                </div>
+                <div class="mt-4">
+                  <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div class="mt-4">
+                  <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+                  <input type="text" id="address" name="address" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                  <div>
+                    <label for="city" class="block text-sm font-medium text-gray-700 mb-2">City</label>
+                    <input type="text" id="city" name="city" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                  </div>
+                  <div>
+                    <label for="state" class="block text-sm font-medium text-gray-700 mb-2">State</label>
+                    <input type="text" id="state" name="state" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                  </div>
+                  <div>
+                    <label for="zip" class="block text-sm font-medium text-gray-700 mb-2">ZIP Code</label>
+                    <input type="text" id="zip" name="zip" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <label for="ebike-model" class="block text-sm font-medium text-gray-700 mb-2">E-Bike Model (Optional)</label>
+                  <input type="text" id="ebike-model" name="ebike-model" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div class="mt-6">
+                  <label for="experience-level" class="block text-sm font-medium text-gray-700 mb-2">E-Bike Experience Level</label>
+                  <select id="experience-level" name="experience-level" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                    <option value="beginner">Beginner (0-6 months)</option>
+                    <option value="intermediate">Intermediate (6 months - 2 years)</option>
+                    <option value="experienced">Experienced (2+ years)</option>
+                  </select>
+                </div>
+                <div class="mt-6">
+                  <label class="inline-flex items-center">
+                    <input type="checkbox" name="terms" class="border border-gray-300 rounded" required>
+                    <span class="ml-2 text-gray-700 text-sm">I agree to the <a href="#" class="text-ebike-electric-blue hover:underline">Terms of Service</a> and <a href="#" class="text-ebike-electric-blue hover:underline">Privacy Policy</a></span>
+                  </label>
+                </div>
+                <div class="mt-8">
+                  <button type="submit" class="btn btn-primary w-full">Complete Registration</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Member Benefits Section -->
+      <section class="py-20">
+        <div class="container">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Member Benefits</h2>
+            <p class="text-gray-600 text-lg">
+              Being part of our community comes with numerous advantages for all e-bike enthusiasts.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <div class="mb-4"><i data-lucide="users" class="h-10 w-10 text-ebike-electric-blue"></i></div>
+              <h3 class="text-xl font-bold mb-3">Community Connection</h3>
+              <p class="text-gray-600">Meet like-minded individuals who share your passion for e-biking. Form friendships, riding groups, and expand your social circle.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <div class="mb-4"><i data-lucide="map" class="h-10 w-10 text-ebike-forest-green"></i></div>
+              <h3 class="text-xl font-bold mb-3">Exclusive Routes</h3>
+              <p class="text-gray-600">Access our curated collection of routes with detailed elevation profiles, difficulty ratings, and points of interest.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <div class="mb-4"><i data-lucide="gift" class="h-10 w-10 text-ebike-sunset-orange"></i></div>
+              <h3 class="text-xl font-bold mb-3">Special Discounts</h3>
+              <p class="text-gray-600">Enjoy members-only discounts at partner shops for e-bike purchases, accessories, and servicing.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <div class="mb-4"><i data-lucide="calendar" class="h-10 w-10 text-ebike-energy-yellow"></i></div>
+              <h3 class="text-xl font-bold mb-3">Priority Registration</h3>
+              <p class="text-gray-600">Get first access to register for popular rides and events before they open to the general public.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <div class="mb-4"><i data-lucide="wrench" class="h-10 w-10 text-ebike-electric-blue"></i></div>
+              <h3 class="text-xl font-bold mb-3">Maintenance Workshops</h3>
+              <p class="text-gray-600">Attend hands-on workshops to learn how to maintain and repair your e-bike, extending its life and performance.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <div class="mb-4"><i data-lucide="badge" class="h-10 w-10 text-ebike-forest-green"></i></div>
+              <h3 class="text-xl font-bold mb-3">Recognition Program</h3>
+              <p class="text-gray-600">Earn badges and achievements for ride milestones, community contributions, and participation in events.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="py-20 bg-gray-900 text-white">
+        <div class="container">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Members Say</h2>
+            <p class="text-gray-300 text-lg">
+              Hear from people who have joined our community and experienced the benefits firsthand.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-800 border-gray-700 rounded-lg p-6">
+              <div class="flex justify-center mb-6">
+                <img 
+                  src="https://i.pravatar.cc/150?img=7" 
+                  alt="James Wilson"
+                  class="rounded-full w-20 h-20 border-2 border-ebike-electric-blue"
+                />
+              </div>
+              <blockquote class="text-gray-300 text-center mb-6">
+                "The Premium membership has been worth every penny. The community is fantastic, and the maintenance workshops alone have saved me hundreds in service costs."
+              </blockquote>
+              <div class="text-center">
+                <h4 class="font-semibold text-white">James Wilson</h4>
+                <p class="text-gray-400 text-sm">Premium Member, 2 years</p>
+              </div>
+            </div>
+            
+            <div class="bg-gray-800 border-gray-700 rounded-lg p-6">
+              <div class="flex justify-center mb-6">
+                <img 
+                  src="https://i.pravatar.cc/150?img=10" 
+                  alt="Olivia Martinez"
+                  class="rounded-full w-20 h-20 border-2 border-ebike-electric-blue"
+                />
+              </div>
+              <blockquote class="text-gray-300 text-center mb-6">
+                "I started with the Basic membership to try it out, and quickly upgraded to Standard. The exclusive routes and group rides have transformed my weekends!"
+              </blockquote>
+              <div class="text-center">
+                <h4 class="font-semibold text-white">Olivia Martinez</h4>
+                <p class="text-gray-400 text-sm">Standard Member, 8 months</p>
+              </div>
+            </div>
+            
+            <div class="bg-gray-800 border-gray-700 rounded-lg p-6">
+              <div class="flex justify-center mb-6">
+                <img 
+                  src="https://i.pravatar.cc/150?img=15" 
+                  alt="Robert Kim"
+                  class="rounded-full w-20 h-20 border-2 border-ebike-electric-blue"
+                />
+              </div>
+              <blockquote class="text-gray-300 text-center mb-6">
+                "As a new e-bike owner, the knowledge and support from this community have been invaluable. I've learned so much and met amazing people."
+              </blockquote>
+              <div class="text-center">
+                <h4 class="font-semibold text-white">Robert Kim</h4>
+                <p class="text-gray-400 text-sm">Basic Member, 3 months</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-20">
+        <div class="container">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p class="text-gray-600 text-lg">
+              Find answers to common questions about our membership options and benefits.
+            </p>
+          </div>
+          
+          <div class="max-w-3xl mx-auto">
+            <div class="mb-6 p-6 bg-white rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">Can I change my membership level after signing up?</h3>
+              <p class="text-gray-600">Yes, you can upgrade your membership at any time. The prorated difference will be charged for the remainder of your term. Downgrades take effect at renewal.</p>
+            </div>
+            
+            <div class="mb-6 p-6 bg-white rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">Is there a minimum commitment period?</h3>
+              <p class="text-gray-600">No, there's no minimum commitment. Paid memberships are for one year and can be canceled anytime, but refunds are not provided for unused portions.</p>
+            </div>
+            
+            <div class="mb-6 p-6 bg-white rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">Do I need to own an e-bike to join?</h3>
+              <p class="text-gray-600">Not at all! Many members join before purchasing to learn more and get advice. We also occasionally have demo events where you can try different models.</p>
+            </div>
+            
+            <div class="mb-6 p-6 bg-white rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">How do the exclusive group rides work?</h3>
+              <p class="text-gray-600">Standard and Premium members get access to special group rides with limited spots. These are announced in advance, and members can register through their account.</p>
+            </div>
+            
+            <div class="mb-6 p-6 bg-white rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">What happens if I need to cancel my membership?</h3>
+              <p class="text-gray-600">You can cancel anytime through your account settings. Your benefits will continue until the end of your current billing period.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (same as in index.html) -->
+    <footer class="bg-gray-900 text-white">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Club Info -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-2">
+              <i data-lucide="bike" class="h-6 w-6 text-ebike-electric-blue"></i>
+              <span class="font-display text-xl font-bold">ElectricRides</span>
+            </div>
+            <p class="text-gray-400">
+              Bringing e-bike enthusiasts together for adventure, community, and sustainable exploration.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-lucide="facebook" size="20"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-lucide="instagram" size="20"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-lucide="twitter" size="20"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-display text-lg font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+              <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+              <li><a href="membership.html" class="text-gray-400 hover:text-white">Membership</a></li>
+              <li><a href="community.html" class="text-gray-400 hover:text-white">Community</a></li>
+              <li><a href="resources.html" class="text-gray-400 hover:text-white">Resources</a></li>
+              <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h4 class="font-display text-lg font-bold mb-4">Useful Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Safety Guidelines</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Partner With Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="font-display text-lg font-bold mb-4">Contact</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start space-x-3">
+                <i data-lucide="map-pin" size="20" class="text-ebike-electric-blue shrink-0 mt-1"></i>
+                <span class="text-gray-400">123 Trail Road, Bikeville, CA 90210</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="phone" size="20" class="text-ebike-electric-blue"></i>
+                <span class="text-gray-400">(555) 123-4567</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="mail" size="20" class="text-ebike-electric-blue"></i>
+                <span class="text-gray-400">info@electricrides.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400">
+          <p>&copy; <span id="current-year"></span> ElectricRides Club. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Membership form functionality
+    function showRegistrationForm(plan) {
+      const regSection = document.getElementById('registration-section');
+      const selectedPlan = document.getElementById('selected-plan');
+      
+      regSection.classList.remove('hidden');
+      selectedPlan.textContent = plan.charAt(0).toUpperCase() + plan.slice(1);
+      
+      // Scroll to registration form
+      regSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    document.getElementById('membership-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your registration! In a real implementation, this would process your membership registration.');
+    });
+  </script>
+</body>
+</html>
