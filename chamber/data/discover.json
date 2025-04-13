@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Sankore Mosque",
+      "address": "Old Town, Timbuktu, Mali",
+      "description": "A historic UNESCO World Heritage Site and one of the oldest educational centers in the world. The Sankore Mosque was an essential part of Timbuktu's golden age as a center of Islamic learning.",
+      "image": "images/discover/sankore-mosque.webp"
+    },
+    {
+      "name": "Ahmed Baba Institute",
+      "address": "214 Scholars Avenue, Timbuktu, Mali",
+      "description": "Home to thousands of ancient manuscripts, the Ahmed Baba Institute preserves Timbuktu's intellectual heritage. Visit to see rare historical documents dating back to the 13th century.",
+      "image": "images/discover/ahmed-baba.webp"
+    },
+    {
+      "name": "Djinguereber Mosque",
+      "address": "Central Square, Timbuktu, Mali",
+      "description": "Built in 1327, this massive adobe structure is one of Timbuktu's three great mosques. Its distinctive towers and unique Sudano-Sahelian architectural style make it an iconic landmark.",
+      "image": "images/discover/djinguereber.webp"
+    },
+    {
+      "name": "Timbuktu Ethnographic Museum",
+      "address": "56 Heritage Road, Timbuktu, Mali",
+      "description": "Explore the rich cultural heritage of Timbuktu and the surrounding region. The museum features artifacts, traditional clothing, musical instruments, and multimedia exhibits about local traditions.",
+      "image": "images/discover/ethnographic-museum.webp"
+    },
+    {
+      "name": "Sahara Desert Tours",
+      "address": "12 Camel Trail, Timbuktu, Mali",
+      "description": "Experience the majesty of the Sahara Desert with guided camel tours and overnight camping excursions. Witness breathtaking sunsets and the brilliant stars of the desert night sky.",
+      "image": "images/discover/sahara-tours.webp"
+    },
+    {
+      "name": "Niger River Cruise",
+      "address": "27 Riverside Dock, Timbuktu, Mali",
+      "description": "Take a scenic boat ride along the historic Niger River, the lifeline of the region. Cruises offer views of traditional fishing villages, wildlife, and beautiful landscapes along the riverbanks.",
+      "image": "images/discover/niger-river.webp"
+    },
+    {
+      "name": "Traditional Craft Market",
+      "address": "89 Artisan Street, Timbuktu, Mali",
+      "description": "Browse a colorful array of handcrafted goods including leather work, jewelry, textiles, and carved wooden items. Meet local artisans and learn about traditional crafting techniques.",
+      "image": "images/discover/craft-market.webp"
+    },
+    {
+      "name": "Desert Oasis Restaurant",
+      "address": "34 Palm Avenue, Timbuktu, Mali",
+      "description": "Savor authentic Malian cuisine in a beautiful setting with garden terraces. Specialties include traditional dishes like tieboudienne (fish and rice), mafé (peanut stew), and refreshing hibiscus drinks.",
+      "image": "images/discover/oasis-restaurant.webp"
+    }
+  ]
+  

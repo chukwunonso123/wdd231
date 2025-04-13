@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Lakeside Chamber of Commerce - Learn about our local community, attractions, and culture">
+  <meta name="author" content="John Doe">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/discover.css">
+  
+  <!-- Facebook Open Graph meta tags -->
+  <meta property="og:title" content="Discover Lakeside Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/timbuktu-og-image.png">
+  <meta property="og:url" content="https://timbuktu-chamber.example.com/discover.html">
+  <meta property="og:description" content="Learn about our local community, attractions, and culture">
+  
+  <title>Lakeside |Chamber of Commerce </title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="images/building-icon.png" alt="Building Icon">
+        </div>
+        <div class="title-container">
+          <h1>Timbuktu</h1>
+          <p>Chamber of Commerce</p>
+        </div>
+      </div>
+      <nav>
+        <button id="hamburger-btn" aria-label="Menu">&#9776;</button>
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="theme-toggle">
+        <button id="theme-btn" aria-label="Toggle Dark Mode">
+          <span class="moon">&#9790;</span>
+          <span class="sun">&#9788;</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <h1>Lakeside Chamber of Commerce</h1>
+      <p>Explore our city's rich history, cultural heritage, and modern attractions</p>
+    </section>
+
+    <div class="discover-container">
+      <section class="discover-intro">
+        <h2>Lakeside Chamber of Commerce</h2>
+        <p>Timbuktu is a city in Mali, historically important as a trading post on the trans-Saharan caravan route and as a center of Islamic culture. Discover the beauty and heritage of our historic city.</p>
+        <div id="visitor-message" class="visitor-message">
+          <!-- Last visit message will be inserted here via JavaScript -->
+        </div>
+      </section>
+      
+      <div class="discover-grid">
+        <!-- Discover cards will be populated here via JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <div class="logo">
+          <img src="images/building-icon.png" alt="Timbuktu Chamber of Commerce Logo">
+        </div>
+        <div>
+          <h3>Lakeside Chamber of Commerce</h3>
+          <p>123 Desert Road, Timbuktu, Mali</p>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p>info@timbuktu-chamber.org</p>
+        <p>+223 2029 4141</p>
+        <p><a href="https://maps.google.com" target="_blank">Location Map</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Lakeside Chamber of Commerce | John Doe | WDD 231</p>
+      <p>Last Modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/discover.js"></script>
+</body>
+</html
